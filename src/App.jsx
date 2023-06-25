@@ -1,5 +1,5 @@
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
-import Users from "./pages/Users";
+import Users from "./components/pages/Users";
 
 const Layout = () => {
     return (
