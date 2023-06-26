@@ -1,5 +1,6 @@
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import Users from "./components/pages/Users";
+import {LoginPage} from "./components/index.js";
 
 const Layout = () => {
     return (
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Users />
+            },
+            {
+                path: "/connexion",
+                element: <LoginPage />
             },
         ]
     },
