@@ -1,18 +1,17 @@
 import styled from "styled-components";
+import {forwardRef} from "react";
 
-export default function Input({type, label, value, onChange, isError, ...restProps}) {
-    return (
+function Input({ type, label, ...restProps }, ref) {    return (
         <InputStyled>
             <div>
                 <label>{label}</label>
                 <input
                     type={type}
-                    value={value}
-                    onChange={onChange}
                     {...restProps}
+                    ref={ref}
                 />
             </div>
-            {!isError && <span>{isError}</span>}
+            {/*{!isError && <span>{isError}</span>}*/}
         </InputStyled>
     );
 }
@@ -20,3 +19,4 @@ export default function Input({type, label, value, onChange, isError, ...restPro
 const InputStyled = styled.div`
 
 `;
+export default forwardRef(Input);

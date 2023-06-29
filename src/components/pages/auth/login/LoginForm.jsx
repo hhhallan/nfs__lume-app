@@ -1,19 +1,14 @@
 import styled from "styled-components";
 import {useState} from "react";
-import {Button, Input, InputContainer} from "../../../index.js";
+import {Button, FakeLink, Input, InputContainer} from "../../../index.js";
+import {useForm} from "react-hook-form";
 
 export default function LoginForm() {
-    const [email, setEmail] = useState("");
+    const {register, handleSubmit, formState: {errors}} = useForm();
+    const onSubmit = data =>  console.log(data);
+    /*const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     // const [formError, setFormError] = useState([]);
-
-    const handleChangeEmail = (e) => {
-        setEmail(e.target.value);
-    }
-
-    const handleChangePassword = (e) => {
-        setPassword(e.target.value);
-    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -23,27 +18,33 @@ export default function LoginForm() {
         setPassword("");
     }
 
+    const handleChangeEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const handleChangePassword = (e) => {
+        setPassword(e.target.value);
+    }*/
+
     return (
-        <LoginFormStyled onSubmit={handleSubmit}>
+        <LoginFormStyled onSubmit={handleSubmit(onSubmit)}>
             <InputContainer>
                 <Input
-                    label={"email"}
+                    label={"Email"}
                     type={"email"}
-                    value={email}
-                    onChange={handleChangeEmail}
-                    // isError={}
+                    {...register("email")}
                 />
             </InputContainer>
 
             <InputContainer>
                 <Input
-                    label={"password"}
+                    label={"Mot de passe"}
                     type={"password"}
-                    value={password}
-                    onChange={handleChangePassword}
-                    // isError={}
+                    {...register("password")}
                 />
             </InputContainer>
+            <span>Mot de passe oublié ?</span>
+            <FakeLink href={"/mot-de-passe-oublie"}>Mot de passe oublié ?</FakeLink>
 
             <Button variant={"primary"} type={"submit"}>Se connecter</Button>
         </LoginFormStyled>
