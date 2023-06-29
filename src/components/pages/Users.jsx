@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {getUsers} from "../api/models/users";
-import api from '../api/config';
+import {getUsers} from "../../api/models/users";
 
 export default function Users() {
     const [users, setUsers] = useState([]);
@@ -8,8 +7,8 @@ export default function Users() {
     useEffect(() => {
         async function fetchUsers() {
             try {
-                const response = await api.get('/users');
-                setUsers(response.data);
+                const usersData = await getUsers();
+                setUsers(usersData);
             } catch (error) {
                 console.error('Une erreur s\'est produite lors de la récupération des utilisateurs :', error);
             }

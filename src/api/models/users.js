@@ -1,4 +1,4 @@
-import axiosInstance from '../config';
+import api from '../config';
 
 export async function getUsers() {
     const response = await api.get('/users');

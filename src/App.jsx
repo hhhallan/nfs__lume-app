@@ -1,10 +1,11 @@
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
-import Users from "./pages/Users";
+import Users from "./components/pages/Users";
+import {LaunchPage, LoginPage, RegisterPage} from "./components/index.js";
 
 const Layout = () => {
     return (
         <div className="app">
-            <Outlet />
+            <Outlet/>
         </div>
     )
 }
@@ -12,11 +13,23 @@ const Layout = () => {
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout />,
+        element: <Layout/>,
         children: [
             {
                 path: "/",
-                element: <Users />
+                element: <LaunchPage/>
+            },
+            {
+                path: "/users",
+                element: <Users/>
+            },
+            {
+                path: "/connexion",
+                element: <LoginPage/>
+            },
+            {
+                path: "/inscription",
+                element: <RegisterPage/>
             },
         ]
     },
@@ -25,7 +38,7 @@ const router = createBrowserRouter([
 const App = () => {
     return (
         <>
-            <RouterProvider router={router} />
+            <RouterProvider router={router}/>
         </>
     );
 };
