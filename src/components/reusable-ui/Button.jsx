@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-export default function Button({variant, children, onClick}) {
+export default function Button({variant, children, onClick, ...restProps}) {
     return (
-        <ButtonStyled className={variant} onClick={onClick}>
+        <ButtonStyled
+            className={variant}
+            onClick={onClick}
+            {...restProps}
+        >
             {children}
         </ButtonStyled>
     );
