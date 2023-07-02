@@ -1,14 +1,7 @@
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Users from "./components/pages/Users";
-import {LaunchPage, LoginPage, RegisterPage} from "./components/index.js";
+import {LaunchPage, Layout, LoginPage, MapPage, RegisterPage} from "./components/index.js";
 
-const Layout = () => {
-    return (
-        <div className="app">
-            <Outlet/>
-        </div>
-    )
-}
 
 const router = createBrowserRouter([
     {
@@ -30,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "/inscription",
                 element: <RegisterPage/>
+            },
+            {
+                path: "/map",
+                element: <MapPage/>
             },
         ]
     },
