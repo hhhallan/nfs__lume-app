@@ -2,7 +2,6 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Users from "./components/pages/Users";
 import {LaunchPage, Layout, LoginPage, MapPage, RegisterPage, ScanPage} from "./components/index.js";
 
-
 const router = createBrowserRouter([
     {
         path: "/",
