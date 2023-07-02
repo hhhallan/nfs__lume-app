@@ -1,4 +1,4 @@
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Users from "./components/pages/Users";
 import {LaunchPage, LoginPage, MapPage, RegisterPage, ScanPage, TestPage} from "./components/index.js";
 
