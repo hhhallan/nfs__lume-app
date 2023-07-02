@@ -9,14 +9,17 @@ export default function Page({children}) {
         setShowMenu(!showMenu);
     }
 
+    const handleClick = (e) => {
+        // console.log(e.target)
+        // setShowMenu(false)
+    }
+
     return (
-        <>
-            <PageStyled>
-            <Menu show={showMenu}/>
-                <div className="btn" onClick={handleShow}/>
-                {children}
-            </PageStyled>
-        </>
+        <PageStyled onClick={handleClick}>
+            <Menu key="menu" show={showMenu}/>
+            <div className="btn" onClick={handleShow}/>
+            {children}
+        </PageStyled>
     );
 }
 
