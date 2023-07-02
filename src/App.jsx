@@ -1,7 +1,14 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import Users from "./components/pages/Users";
-import {LaunchPage, Layout, LoginPage, MapPage, RegisterPage, ScanPage} from "./components/index.js";
+import {LaunchPage, LoginPage, MapPage, RegisterPage, ScanPage, TestPage} from "./components/index.js";
 
+const Layout = () =>  {
+    return (
+        <div>
+            <Outlet/>
+        </div>
+    );
+}
 
 const router = createBrowserRouter([
     {
@@ -31,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path: "/scan",
                 element: <ScanPage/>
+            },
+            {
+                path: "/test",
+                element: <TestPage/>
             },
         ]
     },

@@ -9,12 +9,14 @@ import LoginForm from "./pages/auth/login/LoginForm.jsx";
 import FakeLink from "./reusable-ui/FakeLink.jsx";
 import RegisterForm from "./pages/auth/register/RegisterForm.jsx";
 import MapPage from "./pages/Map/MapPage.jsx";
-import Layout from "./pages/Layout.jsx";
 import CustomMarker from "./pages/Map/CustomMarker.jsx";
 import ScooterMenu from "./pages/Map/layers/ScooterMenu.jsx";
 import BottomMenu from "./pages/Map/layers/BottomMenu.jsx";
 import ScanMenu from "./pages/Map/layers/ScanMenu.jsx";
 import ScanPage from "./pages/ScanPage.jsx";
+import Menu from "./pages/Menu.jsx";
+import TestPage from "./pages/TestPage.jsx";
+import Page from "./pages/Page.jsx";
 
 
 export {
@@ -29,10 +31,12 @@ export {
     FakeLink,
     RegisterForm,
     MapPage,
-    Layout,
     CustomMarker,
     ScooterMenu,
     BottomMenu,
     ScanMenu,
-    ScanPage
+    ScanPage,
+    Menu,
+    TestPage,
+    Page,
 }
