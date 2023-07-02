@@ -10,7 +10,7 @@ export default function ScanMenu() {
 
     return (
         <BottomMenu>
-            <Button onClick={() => handleClick}>
+            <Button onClick={handleClick}>
                 Scanner une trottinette
             </Button>
         </BottomMenu>

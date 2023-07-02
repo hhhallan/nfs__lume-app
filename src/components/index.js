@@ -14,6 +14,7 @@ import CustomMarker from "./pages/Map/CustomMarker.jsx";
 import ScooterMenu from "./pages/Map/layers/ScooterMenu.jsx";
 import BottomMenu from "./pages/Map/layers/BottomMenu.jsx";
 import ScanMenu from "./pages/Map/layers/ScanMenu.jsx";
+import ScanPage from "./pages/ScanPage.jsx";
 
 
 export {
@@ -33,4 +34,5 @@ export {
     ScooterMenu,
     BottomMenu,
     ScanMenu,
+    ScanPage
 }
