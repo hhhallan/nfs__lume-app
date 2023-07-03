@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {useState} from "react";
-import {Button, FakeLink, Input, InputContainer} from "../../../index.js";
 import {useForm} from "react-hook-form";
+import {InputContainer, Button, FakeLink, Input} from "../../../reusable-ui/component.js";
 
 export default function LoginForm() {
     const {register, handleSubmit, formState: {errors}} = useForm();

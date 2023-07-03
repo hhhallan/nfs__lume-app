@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import {AuthTitle, FakeLink, RegisterForm} from "../../../index.js";
+import RegisterForm from "./RegisterForm.jsx";
+import {AuthTitle, FakeLink} from "../../../reusable-ui/component.js";
+
 
 export default function RegisterPage() {
 

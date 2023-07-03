@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {useNavigate} from "react-router-dom";
-import {Button} from "../index.js";
+import {Button} from "../reusable-ui/component.js";
 
 export default function SecondaryPage({ title, children, variant = 'primary' }) {
     const navigate = useNavigate();

@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import {BottomMenu} from "../../../index.js";
+import {BottomMenu} from "../../reusable-ui/component.js";
 
 export default function ScooterMenu({ scooter, onClick }) {
     return (

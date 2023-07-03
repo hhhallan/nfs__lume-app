@@ -1,4 +1,7 @@
-import {Button, Divider, ListContainer, PaymentListItem, SecondaryPage} from "../../index.js";
+import {SecondaryPage} from "../../index.js";
+import {ListContainer, Divider, Button} from "../../reusable-ui/component.js";
+import PaymentListItem from "./PaymentListItem.jsx";
+
 
 export default function PaymentPage() {
     return (

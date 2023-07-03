@@ -1,5 +1,5 @@
-import {BottomMenu, Button} from "../../../index.js";
 import {useNavigate} from "react-router-dom";
+import {BottomMenu, Button} from "../../reusable-ui/component.js";
 
 export default function ScanMenu() {
     const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {Button} from "../../index.js";
 import {useNavigate} from "react-router-dom";
+import {Button} from "../../reusable-ui/component.js";
 
 export default function LaunchPage() {
     const navigate = useNavigate();

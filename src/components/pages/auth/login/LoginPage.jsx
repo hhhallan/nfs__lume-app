@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {AuthTitle, FakeLink, LoginForm} from "../../../index.js";
+import {AuthTitle, FakeLink} from "../../../reusable-ui/component.js";
+import LoginForm from "./LoginForm.jsx";
 
 export default function LoginPage() {
         return (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Button, Input, InputContainer} from "../../../index.js";
+import {InputContainer, Button, Input} from "../../../reusable-ui/component.js";
 import {useForm} from "react-hook-form";
 
 export default function RegisterForm() {
