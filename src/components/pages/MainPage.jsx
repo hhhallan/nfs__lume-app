@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {Menu} from "../index.js";
 import {useState} from "react";
 
-export default function Page({children}) {
+export default function MainPage({children}) {
     const [showMenu, setShowMenu] = useState(false);
 
     const handleShow = () => {

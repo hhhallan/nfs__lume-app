@@ -1,6 +1,6 @@
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import Users from "./components/pages/Users";
-import {LaunchPage, LoginPage, MapPage, RegisterPage, ScanPage, TestPage} from "./components/index.js";
+import {LaunchPage, LoginPage, MapPage, PaymentPage, RegisterPage, ScanPage, TestPage} from "./components/index.js";
 
 const Layout = () =>  {
     return (
@@ -42,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: "/test",
                 element: <TestPage/>
+            },
+            {
+                path: "/paiement",
+                element: <PaymentPage/>
             },
         ]
     },

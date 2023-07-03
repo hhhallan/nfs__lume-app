@@ -13,10 +13,15 @@ import CustomMarker from "./pages/map/CustomMarker.jsx";
 import ScooterMenu from "./pages/map/layers/ScooterMenu.jsx";
 import BottomMenu from "./pages/map/layers/BottomMenu.jsx";
 import ScanMenu from "./pages/map/layers/ScanMenu.jsx";
-import ScanPage from "./pages/ScanPage.jsx";
+import ScanPage from "./pages/scan/ScanPage.jsx";
 import Menu from "./pages/menu/Menu.jsx";
 import TestPage from "./pages/TestPage.jsx";
-import Page from "./pages/Page.jsx";
+import MainPage from "./pages/MainPage.jsx";
+import SecondaryPage from "./pages/SecondaryPage.jsx";
+import PaymentPage from "./pages/payment/PaymentPage.jsx";
+import ListContainer from "./reusable-ui/ListContainer.jsx";
+import PaymentListItem from "./pages/payment/PaymentListItem.jsx";
+import Divider from "./reusable-ui/Divider.jsx";
 
 
 export {
@@ -38,5 +43,10 @@ export {
     ScanPage,
     Menu,
     TestPage,
-    Page,
+    MainPage,
+    SecondaryPage,
+    PaymentPage,
+    ListContainer,
+    PaymentListItem,
+    Divider
 }
