@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import {InputContainer, Button, Input, FormContainer} from "../../../reusable-ui/component.js";
 import {useForm} from "react-hook-form";
+import {useNavigate} from "react-router-dom";
 
 export default function RegisterForm() {
     const {register, handleSubmit, formState: {errors}} = useForm();
     const onSubmit = data => console.log(data);
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/map');
+    }
 
     return (
         <FormContainer onSubmit={handleSubmit(onSubmit)}>
@@ -47,7 +52,7 @@ export default function RegisterForm() {
                 />
             </InputContainer>
 
-            <Button variant={"primary"} type={"submit"}>S'inscrire</Button>
+            <Button variant={"primary"} type={"submit"} onClick={handleClick}>S'inscrire</Button>
         </FormContainer>
     );
 }

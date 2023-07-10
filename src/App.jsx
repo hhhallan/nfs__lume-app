@@ -1,5 +1,4 @@
-import {createBrowserRouter, Navigate, Outlet, RouterProvider} from "react-router-dom";
-import Users from "./components/pages/Users";
+import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import {
     ErrorPage,
     LaunchPage,
@@ -8,7 +7,6 @@ import {
     PaymentPage,
     RegisterPage,
     ScanPage,
-    TestPage
 } from "./components/index.js";
 
 const Layout = () =>  {
@@ -19,14 +17,6 @@ const Layout = () =>  {
     );
 }
 
-/*const PrivateRoute = ({ element, isAuthenticated, redirectTo }) => {
-    return isAuthenticated ? (
-        element
-    ) : (
-        <Navigate to={redirectTo} replace />
-    );
-};*/
-
 const router = createBrowserRouter([
     {
         path: "/",
@@ -35,10 +25,6 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <LaunchPage/>
-            },
-            {
-                path: "/users",
-                element: <Users/>
             },
             {
                 path: "/connexion",
@@ -55,10 +41,6 @@ const router = createBrowserRouter([
             {
                 path: "/scan",
                 element: <ScanPage/>
-            },
-            {
-                path: "/test",
-                element: <TestPage/>
             },
             {
                 path: "/paiement",
