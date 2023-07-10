@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import ReactMapGL from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import styled from 'styled-components';
-import {CustomMarker, ScanMenu, ScooterMenu} from "../../index.js";
+import CustomMarker from "./CustomMarker.jsx";
+import ScanMenu from "./ScanMenu.jsx";
+import ScooterMenu from "./ScooterMenu.jsx";
 
 const TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 

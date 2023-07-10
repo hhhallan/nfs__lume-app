@@ -2,22 +2,21 @@ import styled from "styled-components";
 import {Menu} from "../index.js";
 import {useState} from "react";
 
-export default function Page({children}) {
+export default function MainPage({children, isLogged = true, style}) {
     const [showMenu, setShowMenu] = useState(false);
 
     const handleShow = () => {
         setShowMenu(!showMenu);
     }
 
-    const handleClick = (e) => {
-        // console.log(e.target)
-        // setShowMenu(false)
-    }
-
     return (
-        <PageStyled onClick={handleClick}>
-            <Menu key="menu" show={showMenu}/>
-            <div className="btn" onClick={handleShow}/>
+        <PageStyled style={style}>
+            {isLogged && (
+                <>
+                    <Menu key="menu" show={showMenu}/>
+                    <div className="btn" onClick={handleShow}/>
+                </>
+            )}
             {children}
         </PageStyled>
     );
@@ -25,7 +24,6 @@ export default function Page({children}) {
 
 const PageStyled = styled.div`
   padding: 20px 20px 0;
-  background: lightgreen;
   height: 100vh;
 
   .btn {

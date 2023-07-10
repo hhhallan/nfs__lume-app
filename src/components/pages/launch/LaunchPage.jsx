@@ -1,30 +1,25 @@
+import {MainPage} from "../../index.js";
+import LaunchCard from "./LaunchCard.jsx";
 import styled from "styled-components";
-import {Button} from "../../index.js";
-import {useNavigate} from "react-router-dom";
 
 export default function LaunchPage() {
-    const navigate = useNavigate();
-
-    const handleInscriptionClick = () => {
-        navigate("/inscription");
-    };
-
-    const handleConnexionClick = () => {
-        navigate("/connexion");
-    };
-
     return (
-        <LaunchStyled>
-            <img src="/images/landing.svg" alt="Personne sur une trottinette"/>
-
-            <div>
-                <Button variant={"secondary"} onClick={handleInscriptionClick}>Inscription</Button>
-                <Button variant={"primary"} onClick={handleConnexionClick}>Connexion</Button>
-            </div>
-        </LaunchStyled>
+        <MainPage
+            isLogged={false}
+            style={{
+                background: "linear-gradient(180deg, #FCB045 0%, #FD531D 100%)"
+            }}
+        >
+            <LaunchStyled>
+                <LaunchCard/>
+            </LaunchStyled>
+        </MainPage>
     );
 }
 
 const LaunchStyled = styled.div`
-  
+  display: flex;
+  align-items: end;
+  padding-bottom: 60px;
+  height: 100%;
 `;

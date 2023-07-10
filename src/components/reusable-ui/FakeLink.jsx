@@ -13,5 +13,6 @@ export default function FakeLink({children, href}) {
 }
 
 const FakeLinkStyled = styled.span`
-  
+  color: #FD5E2F;
+  font-weight: 600;
 `;

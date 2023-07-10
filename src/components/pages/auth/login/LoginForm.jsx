@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {useState} from "react";
-import {Button, FakeLink, Input, InputContainer} from "../../../index.js";
 import {useForm} from "react-hook-form";
+import {InputContainer, Button, FakeLink, Input, FormContainer} from "../../../reusable-ui/component.js";
 
 export default function LoginForm() {
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -27,7 +27,7 @@ export default function LoginForm() {
     }*/
 
     return (
-        <LoginFormStyled onSubmit={handleSubmit(onSubmit)}>
+        <FormContainer onSubmit={handleSubmit(onSubmit)}>
             <InputContainer>
                 <Input
                     label={"Email"}
@@ -43,14 +43,9 @@ export default function LoginForm() {
                     {...register("password")}
                 />
             </InputContainer>
-            <span>Mot de passe oublié ?</span>
             <FakeLink href={"/mot-de-passe-oublie"}>Mot de passe oublié ?</FakeLink>
 
             <Button variant={"primary"} type={"submit"}>Se connecter</Button>
-        </LoginFormStyled>
+        </FormContainer>
     );
 }
-
-const LoginFormStyled = styled.form`
-
-`;

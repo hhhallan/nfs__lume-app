@@ -1,6 +1,15 @@
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Navigate, Outlet, RouterProvider} from "react-router-dom";
 import Users from "./components/pages/Users";
-import {LaunchPage, LoginPage, MapPage, RegisterPage, ScanPage, TestPage} from "./components/index.js";
+import {
+    ErrorPage,
+    LaunchPage,
+    LoginPage,
+    MapPage,
+    PaymentPage,
+    RegisterPage,
+    ScanPage,
+    TestPage
+} from "./components/index.js";
 
 const Layout = () =>  {
     return (
@@ -9,6 +18,14 @@ const Layout = () =>  {
         </div>
     );
 }
+
+/*const PrivateRoute = ({ element, isAuthenticated, redirectTo }) => {
+    return isAuthenticated ? (
+        element
+    ) : (
+        <Navigate to={redirectTo} replace />
+    );
+};*/
 
 const router = createBrowserRouter([
     {
@@ -43,6 +60,14 @@ const router = createBrowserRouter([
                 path: "/test",
                 element: <TestPage/>
             },
+            {
+                path: "/paiement",
+                element: <PaymentPage/>
+            },
+            {
+                path: "*",
+                element: <ErrorPage/>
+            }
         ]
     },
 ])

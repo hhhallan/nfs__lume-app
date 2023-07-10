@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Divider} from "../component.js";
 
 export default function BottomMenu({children}) {
     return (
@@ -24,7 +25,6 @@ const BottomMenuStyled = styled.div`
 
   .bottom-bar {
     height: 34px;
-    background-color: red;
     margin-top: 10px;
   }
 `;

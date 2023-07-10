@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Button, Input, InputContainer} from "../../../index.js";
+import {InputContainer, Button, Input, FormContainer} from "../../../reusable-ui/component.js";
 import {useForm} from "react-hook-form";
 
 export default function RegisterForm() {
@@ -7,7 +7,7 @@ export default function RegisterForm() {
     const onSubmit = data => console.log(data);
 
     return (
-        <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
+        <FormContainer onSubmit={handleSubmit(onSubmit)}>
             <InputContainer>
 
                 <Input
@@ -48,7 +48,7 @@ export default function RegisterForm() {
             </InputContainer>
 
             <Button variant={"primary"} type={"submit"}>S'inscrire</Button>
-        </RegisterFormStyled>
+        </FormContainer>
     );
 }
 
