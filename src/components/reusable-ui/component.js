@@ -6,6 +6,7 @@ import InputContainer from "./form/InputContainer.jsx";
 import Input from "./form/Input.jsx";
 import Divider from "./Divider.jsx";
 import BottomMenu from "./containers/BottomMenu.jsx";
+import FormContainer from "./form/FormContainer.jsx";
 
 export {
     Button,
@@ -16,4 +17,5 @@ export {
     InputContainer,
     Divider,
     BottomMenu,
+    FormContainer,
 }

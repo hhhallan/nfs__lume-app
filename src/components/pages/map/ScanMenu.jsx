@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-import {BottomMenu, Button} from "../../reusable-ui/component.js";
+import {BottomMenu, Button, Divider} from "../../reusable-ui/component.js";
 
 export default function ScanMenu() {
     const navigate = useNavigate();
@@ -10,6 +10,7 @@ export default function ScanMenu() {
 
     return (
         <BottomMenu>
+
             <Button onClick={handleClick}>
                 Scanner une trottinette
             </Button>

@@ -8,6 +8,7 @@ import TestPage from "./pages/TestPage.jsx";
 import MainPage from "./pages/MainPage.jsx";
 import SecondaryPage from "./pages/SecondaryPage.jsx";
 import PaymentPage from "./pages/payment/PaymentPage.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
 
 
 export {
@@ -21,4 +22,5 @@ export {
     MainPage,
     SecondaryPage,
     PaymentPage,
+    ErrorPage
 }

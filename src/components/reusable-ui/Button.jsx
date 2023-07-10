@@ -13,12 +13,28 @@ export default function Button({variant = 'primary', children, onClick, ...restP
 }
 
 const ButtonStyled = styled.button`
-  font-family: inherit;
+  font-family: "Poppins", sans-serif;
   background: none;
   border: none;
+
+  display: flex;
+  width: 100%;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  gap: 10px;
+  
+  img {
+    width: 24px;
+    height: 24px;
+  }
   
   &.primary {
-    background-color: lightblue;
+    background-color: #FD531D;
+    color: #fff;
   }
 
   &.secondary {

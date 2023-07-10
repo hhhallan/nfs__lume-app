@@ -9,5 +9,8 @@ export default function AuthTitle({children}) {
 }
 
 const AuthTitleStyled = styled.h2`
-  color: red;
+  color: #FD5E2F;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
 `;
